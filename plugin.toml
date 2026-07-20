@@ -1,9 +1,10 @@
 id           = "dotnetrob/cat"
 name         = "Cat"
-version      = "1.1.1"
+version      = "1.1.2"
 plugin_api   = 3
 author       = "DotNetRob"
 license      = "MIT"
+dependencies = []
 icon         = "paw"
 description  = "An animated running cat bar widget whose speed reflects CPU usage."
 tags         = ["bar", "animation", "system", "fun"]
