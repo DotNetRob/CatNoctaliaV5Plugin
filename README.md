@@ -35,8 +35,9 @@ noctalia msg plugins enable dotnetrob/cat
 ## Running it
 
 Add the widget to a bar with **Settings → Bar: \<name\> → Add Widget → Cat**.
-Click the widget in the bar to show a notification with the current CPU
-percentage.
+Click the widget in the bar to pop up a panel with a bigger copy of the cat
+and the current CPU percentage; click anywhere outside the panel to dismiss
+it.
 
 To add it without the UI (useful over SSH, or for scripting a test setup),
 edit `~/.local/state/noctalia/settings.toml` directly: add `"cat"` to one of
@@ -69,7 +70,10 @@ if you're curious why).
   theme changes) or Custom (pick a fixed color)
 - **Custom Color** — used when Cat Color is set to Custom
 
-Clicking the widget shows a notification with the current CPU percentage.
+Clicking the widget toggles a popup panel showing the same cat at panel size
+(animating in step with the bar cat) and the current CPU percentage. The
+panel also picks up host-standard settings (placement, position, open near
+click) on the plugin's settings page.
 
 ## Debugging
 
@@ -83,7 +87,7 @@ depends on what changed:
 
 | You changed | What to run |
 | --- | --- |
-| `cat.luau` | Nothing — it hot-reloads on save. |
+| `cat.luau` / `cat_panel.luau` | Nothing — they hot-reload on save. |
 | `plugin.toml` (existing keys) | `noctalia msg config-reload` |
 | `plugin.toml` (added/renamed/removed a setting *key*) | Full reload — see below |
 | `fonts/*.otf` contents | New filename required — see [Rebuilding the font](#rebuilding-the-font) |
