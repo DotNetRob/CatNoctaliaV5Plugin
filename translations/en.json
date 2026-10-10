@@ -19,7 +19,7 @@
     },
     "poll_interval": {
       "label": "CPU Poll Interval",
-      "description": "How often to sample CPU usage, in seconds."
+      "description": "How often to read CPU usage, in seconds. Noctalia's system monitor sets the fastest refresh (2 seconds by default)."
     },
     "cat_color_mode": {
       "label": "Cat Color",
