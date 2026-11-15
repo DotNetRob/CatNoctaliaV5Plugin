@@ -13,8 +13,11 @@ This works whether or not the plugin is ever accepted into
 [community-plugins](https://github.com/noctalia-dev/community-plugins) — it's
 how to run it straight from a clone.
 
-**Requirements:** Noctalia v5 installed and running (`noctalia --version`),
-`git`.
+**Requirements:** Noctalia **5.5.0 or newer** installed and running
+(`noctalia --version`; 1.4.0 declares `plugin_api = 52` for the bounce),
+`git`. On an older Noctalia, check out the `v1.3.0` state of this repo
+instead; the community plugin store serves 1.3.0 to older shells
+automatically.
 
 ```bash
 git clone https://github.com/DotNetRob/CatNoctaliaV5Plugin.git
@@ -66,6 +69,8 @@ if you're curious why).
 - **Walk Threshold** — CPU % at which the cat wakes up and starts walking (default 15%)
 - **Run Threshold** — CPU % at which the cat breaks into a run (default 60%)
 - **CPU Poll Interval** — how often to sample CPU usage, in seconds (default 2)
+- **Bounce While Running** — bob the cat up and down in step with its stride
+  while it walks or runs (default on)
 - **Cat Color** — Match Theme (uses the palette's `secondary` role and tracks
   theme changes) or Custom (pick a fixed color)
 - **Custom Color** — used when Cat Color is set to Custom

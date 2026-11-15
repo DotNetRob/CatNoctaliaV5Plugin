@@ -19,7 +19,7 @@
     },
     "poll_interval": {
       "label": "CPU Poll Interval",
-      "description": "How often to read CPU usage, in seconds. Noctalia's system monitor sets the fastest refresh (2 seconds by default)."
+      "description": "How often to sample CPU usage, in seconds."
     },
     "cat_color_mode": {
       "label": "Cat Color",
@@ -30,6 +30,20 @@
     "cat_color": {
       "label": "Custom Color",
       "description": "Used when Cat Color is set to Custom."
+    },
+    "bounce": {
+      "label": "Bounce While Running",
+      "description": "Bob the cat up and down in step with its stride while it walks or runs."
     }
+  },
+  "tooltip": "Cat — CPU {percent}% ({pace})",
+  "pace": {
+    "idle": "asleep",
+    "walk": "walking",
+    "run": "running"
+  },
+  "panel": {
+    "cpu": "CPU {percent}%",
+    "cpu_unknown": "CPU —"
   }
 }
